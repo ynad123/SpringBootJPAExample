@@ -1,10 +1,10 @@
-## SpringBootJPAExample: REST-Backend mit Spring Boot
+# SpringBootJPAExample: REST-Backend mit Spring Boot
 
-# Einstieg in Spring Boot:
+## Einstieg in Spring Boot:
 https://www.tutorialspoint.com/spring_boot/spring_boot_tomcat_deployment.htm
 
 
-# Vorbereitungen
+## Vorbereitungen
 Java EE installiert
 Mysql installiert —> https://www.mysql.com/de/ 
 MysqlWorkBench installiert und auf localhost DB angelegt
@@ -15,7 +15,7 @@ Tomcat installieren
 - Dann ./startup
 
 
-# In Eclipse
+## In Eclipse
 spring boot Projekt angelegt entsprechend des Videos:
 https://www.youtube.com/watch?v=1ny8-kzmdJE
 
@@ -26,7 +26,7 @@ Diese Projekt ist verfügbar, wenn in Eclipse gestartet —> direkt unter localh
 - https://www.bezkoder.com/spring-boot-jpa-crud-rest-api/
 
 
-#Deployment über Tomcat
+## Deployment über Tomcat
 
 In Eclipse: in pom.xml Änderungen:
 <packaging>war</packaging> auf gleicher Ebene wie parent
