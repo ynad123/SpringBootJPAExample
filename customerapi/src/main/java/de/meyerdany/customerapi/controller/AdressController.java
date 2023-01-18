@@ -12,28 +12,30 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import de.meyerdany.customerapi.entity.Address;
 import de.meyerdany.customerapi.entity.Customer;
+import de.meyerdany.customerapi.repository.AddressRepository;
 import de.meyerdany.customerapi.repository.CustomerRepository;
 
 @RestController
-@RequestMapping("/customer")
+@RequestMapping("/address")
 
-public class CustomerController {
+public class AdressController {
 	
-	private CustomerRepository customerRepository;
+	private AddressRepository addressRepository;
 
-	public CustomerController(CustomerRepository customerRepository) {
-		this.customerRepository = customerRepository;
+	public AdressController(AddressRepository addressRepository) {
+		this.addressRepository = addressRepository;
 	}
 	
 	@GetMapping("")
-	public List<Customer> index() {
-		return customerRepository.findAll();
+	public List<Address> index() {
+		return addressRepository.findAll();
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<Customer> getCustomerById(@PathVariable("id") long id) {
-		Optional<Customer> data = customerRepository.findById(id);
+	public ResponseEntity<Address> getCustomerById(@PathVariable("id") long id) {
+		Optional<Address> data = addressRepository.findById(id);
 
 	    if (data.isPresent()) {
 	      return new ResponseEntity<>(data.get(), HttpStatus.OK);
@@ -43,10 +45,10 @@ public class CustomerController {
 	  }
 	
 	 @PostMapping("")
-	 public ResponseEntity<Customer> createCustomer(@RequestBody Customer customer) {
+	 public ResponseEntity<Address> createCustomer(@RequestBody Address adr) {
 	    try {
-	    	Customer _cust = customerRepository.saveAndFlush(customer);
-	      return new ResponseEntity<>(_cust, HttpStatus.CREATED);
+	    	Address _adr = addressRepository.saveAndFlush(adr);
+	      return new ResponseEntity<>(_adr, HttpStatus.CREATED);
 	    } catch (Exception e) {
 	      return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 	    }
