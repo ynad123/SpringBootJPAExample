@@ -7,7 +7,6 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 
 @SpringBootApplication
 public class CustomerapiApplication extends SpringBootServletInitializer  {
-
 	
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {

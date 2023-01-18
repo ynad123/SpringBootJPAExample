@@ -1,9 +1,11 @@
 package de.meyerdany.customerapi.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Customer {
@@ -13,9 +15,23 @@ public class Customer {
 	private Long id;
 	
 	private String firstName;
-	
 	private String lastName;
-
+		
+	
+	@ManyToOne(cascade=CascadeType.PERSIST)
+    private Address address;
+	  
+	
+	public Customer() {	
+	}
+	
+	public Customer(String firstName, String lastName, Address address) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.address = address;
+	}
+	
 	public String getFirstName() {
 		return firstName;
 	}
@@ -35,6 +51,17 @@ public class Customer {
 	public Long getId() {
 		return id;
 	}
+
+	
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+	
 	
 	
 
