@@ -9,9 +9,9 @@ http://www.java2s.com/Tutorials/Java/JPA/index.htm
 
 
 ## Vorbereitungen
-Java EE installiert
-Mysql installiert —> https://www.mysql.com/de/ 
-MysqlWorkBench installiert und auf localhost DB angelegt
+Java EE installiert<br>
+Mysql installiert ( https://www.mysql.com/de/ )<br>
+MysqlWorkBench installiert und auf localhost DB angelegt<br>
 
 Tomcat installieren
 - Tomcat local installieren —> Verzeichnis downloaden und entpacken
