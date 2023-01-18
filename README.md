@@ -3,6 +3,10 @@
 ## Einstieg in Spring Boot:
 https://www.tutorialspoint.com/spring_boot/spring_boot_tomcat_deployment.htm
 
+## Einstieg in Java JPA
+http://www.java2s.com/Tutorials/Java/JPA/index.htm
+
+
 
 ## Vorbereitungen
 Java EE installiert
